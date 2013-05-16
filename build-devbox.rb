@@ -9,10 +9,10 @@ class BuildDevbox < Formula
 
   head 'https://github.com/dhallman/homebrew-ruby_envs.git', :branch => 'master'
 
-  #require_tap 'phinze/cask'
+  require_tap 'phinze/cask'
   depends_on 'chruby'
   depends_on 'ruby-build'
-  depends_on 'phinze/cask/brew-cask'
+  depends_on 'brew-cask'
 
   def suppress_caveats?(depi)
     true
