@@ -1,4 +1,5 @@
 require 'formula'
+require 'pp'
 
 class BuildDevbox < Formula
   homepage 'https://github.com/dhallman/ruby-envs/wiki/setup-devbox'
@@ -8,8 +9,10 @@ class BuildDevbox < Formula
 
   head 'https://github.com/dhallman/homebrew-ruby_envs.git', :branch => 'master'
 
+  add_tap 'phinze/cask'
   depends_on 'chruby'
   depends_on 'ruby-build'
+  depends_on 'brew-cask'
 
 
   def suppress_caveats?(depi)
@@ -26,6 +29,7 @@ class BuildDevbox < Formula
   def finalize(depi)
 
     ohai "Finalize #{depi.inspect}..."
+    pp depi
   end
 end
 
