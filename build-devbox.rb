@@ -11,6 +11,11 @@ class BuildDevbox < Formula
   depends_on 'chruby'
   depends_on 'ruby-build'
 
+
+  def suppress_caveats?(depi)
+    true
+  end
+
   def install
     #depends_on 'mysql'
     #ohai "Mysql is installed."
