@@ -2,8 +2,11 @@ require 'formula'
 
 class ChrubyMysql < Formula
   homepage 'https://github.com/dhallman/ruby-envs/wiki/chruby-mysql'
-  sha1 '8a30055f200b6c2253752094ed42397e7e199bad'
+
+  url 'https://github.com/dhallman/homebrew-ruby_envs.git', :tag => '0.0.3'
   version '0.0.3'
+
+  head 'https://github.com/dhallman/homebrew-ruby_envs.git', :branch => 'master'
 
   depends_on 'chruby'
   depends_on 'ruby-build'
