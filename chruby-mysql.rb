@@ -8,10 +8,6 @@ class ChrubyMysql < Formula
 
   head 'https://github.com/dhallman/homebrew-ruby_envs.git', :branch => 'master'
 
-  def self.init
-    system "brew tap phinze/homebrew-cask"
-  end
-
   depends_on 'chruby'
   depends_on 'ruby-build'
   depends_on 'mysql'
