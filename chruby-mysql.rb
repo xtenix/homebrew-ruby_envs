@@ -11,7 +11,7 @@ class ChrubyMysql < Formula
   depends_on 'chruby'
   depends_on 'ruby-build'
   depends_on 'mysql'
-  depends_on 'phize/homebrew-cask/brew-cask'
+  depends_on 'phinze/homebrew-cask/brew-cask'
 
   def install
     puts "installed."
