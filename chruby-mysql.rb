@@ -8,10 +8,11 @@ class ChrubyMysql < Formula
 
   head 'https://github.com/dhallman/homebrew-ruby_envs.git', :branch => 'master'
 
+  tap 'phinze/homebrew-cask'
   depends_on 'chruby'
   depends_on 'ruby-build'
   depends_on 'mysql'
-  depends_on 'phinze/homebrew-cask/brew-cask'
+  depends_on 'brew-cask'
 
   def install
     puts "installed."
