@@ -1,7 +1,7 @@
 require 'formula'
 
 class ChrubyMysql < Formula
-  homepage 'https://github.com/dhallman/ruby-envs/wiki/chruby-mysql'
+  homepage 'https://github.com/dhallman/ruby-envs/wiki/setup-chruby'
 
   url 'https://github.com/dhallman/homebrew-ruby_envs.git', :tag => '0.0.3'
   version '0.0.3'
@@ -9,12 +9,9 @@ class ChrubyMysql < Formula
   head 'https://github.com/dhallman/homebrew-ruby_envs.git', :branch => 'master'
 
   depends_on 'chruby'
-  depends_on 'ruby-build'
-  depends_on 'mysql'
-  depends_on 'brew-cask'
 
   def install
-    puts "installed."
+    puts "chruby installed."
   end
 end
 
