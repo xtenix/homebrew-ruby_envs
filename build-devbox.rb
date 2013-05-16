@@ -9,7 +9,7 @@ class BuildDevbox < Formula
 
   head 'https://github.com/dhallman/homebrew-ruby_envs.git', :branch => 'master'
 
-  requires_tap 'phinze/cask'
+  add_tap 'phinze/cask'
   depends_on 'chruby'
   depends_on 'ruby-build'
   depends_on 'brew-cask'
