@@ -1,6 +1,6 @@
 require 'formula'
 
-class BuildDevBox < Formula
+class BuildDevbox < Formula
   homepage 'https://github.com/dhallman/ruby-envs/wiki/setup-devbox'
 
   url 'https://github.com/dhallman/homebrew-ruby_envs.git', :tag => '0.0.3'
