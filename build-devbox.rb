@@ -12,7 +12,7 @@ class BuildDevbox < Formula
   add_tap 'phinze/cask'
   depends_on 'chruby'
   depends_on 'ruby-build'
-  depends_on 'brew-cask'
+  #depends_on 'brew-cask'
 
 
   def suppress_caveats?(depi)
@@ -21,7 +21,7 @@ class BuildDevbox < Formula
 
   def install
     #depends_on 'mysql'
-    #ohai "Mysql is installed."
+    ohai "Mysql is installed."
     #depends_on 'brew-cask'
     #ohai "Brew cask is installed."
   end
