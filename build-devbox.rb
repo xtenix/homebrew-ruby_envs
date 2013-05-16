@@ -8,12 +8,15 @@ class BuildDevbox < Formula
 
   head 'https://github.com/dhallman/homebrew-ruby_envs.git', :branch => 'master'
 
-  depends_on 'init-taps'
-  depends_on 'setup-chruby'
-  depends_on 'setup-ruby-build'
-
   def install
-    puts "Done."
+    depends_on 'chruby'
+    ohai "Chruby is installed."
+    depends_on 'ruby-build'
+    ohai "Ruby-build is installed."
+    depends_on 'mysql'
+    ohai "Mysql is installed."
+    depends_on 'brew-cask'
+    ohai "Brew cask is installed."
   end
 end
 
