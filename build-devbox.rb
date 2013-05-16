@@ -13,10 +13,15 @@ class BuildDevbox < Formula
     ohai "Chruby is installed."
     depends_on 'ruby-build'
     ohai "Ruby-build is installed."
-    depends_on 'mysql'
-    ohai "Mysql is installed."
-    depends_on 'brew-cask'
-    ohai "Brew cask is installed."
+    #depends_on 'mysql'
+    #ohai "Mysql is installed."
+    #depends_on 'brew-cask'
+    #ohai "Brew cask is installed."
+  end
+
+  def finalize(depi)
+
+    ohai "Finalize #{depi.inspect}..."
   end
 end
 
