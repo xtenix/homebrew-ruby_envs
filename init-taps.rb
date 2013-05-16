@@ -1,6 +1,6 @@
 require 'formula'
 
-class ChrubyMysql < Formula
+class InitTaps < Formula
   homepage 'https://github.com/dhallman/ruby-envs/wiki/setup-taps'
 
   url 'https://github.com/dhallman/homebrew-ruby_envs.git', :tag => '0.0.3'

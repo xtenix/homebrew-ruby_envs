@@ -1,6 +1,6 @@
 require 'formula'
 
-class ChrubyMysql < Formula
+class SetupRubyBuild < Formula
   homepage 'https://github.com/dhallman/ruby-envs/wiki/setup-ruby-build'
 
   url 'https://github.com/dhallman/homebrew-ruby_envs.git', :tag => '0.0.3'

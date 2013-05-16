@@ -1,6 +1,6 @@
 require 'formula'
 
-class ChrubyMysql < Formula
+class SetupBrewCask < Formula
   homepage 'https://github.com/dhallman/ruby-envs/wiki/setup-brew-cask'
 
   url 'https://github.com/dhallman/homebrew-ruby_envs.git', :tag => '0.0.3'

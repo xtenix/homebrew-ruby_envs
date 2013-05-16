@@ -1,6 +1,6 @@
 require 'formula'
 
-class ChrubyMysql < Formula
+class BuildDevBox < Formula
   homepage 'https://github.com/dhallman/ruby-envs/wiki/setup-devbox'
 
   url 'https://github.com/dhallman/homebrew-ruby_envs.git', :tag => '0.0.3'
