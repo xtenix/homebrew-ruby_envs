@@ -9,7 +9,7 @@ class BuildDevbox < Formula
 
   head 'https://github.com/dhallman/homebrew-ruby_envs.git', :branch => 'master'
 
-  add_tap 'phinze/cask'
+  requires_tap 'phinze/cask'
   depends_on 'chruby'
   depends_on 'ruby-build'
   depends_on 'brew-cask'
@@ -26,9 +26,13 @@ class BuildDevbox < Formula
     #ohai "Brew cask is installed."
   end
 
-  def finalize(depi)
+  def finalize_chruby(depi)
+    ohai "Finalize chruby ! #{depi.inspect}..."
+    pp depi
+  end
 
-    ohai "Finalize #{depi.inspect}..."
+  def finalize_ruby_build(depi)
+    ohai "Finalize ruby-build ! #{depi.inspect}..."
     pp depi
   end
 end
