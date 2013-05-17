@@ -19,9 +19,11 @@ class BuildDevbox < Formula
   #depends_on 'mysql'
   #depends_on 'brew-cask'
 
-  def finalize_build_build(fi)
+  def finalize_ruby_build(fi)
     ohai "Installing ruby 1.9.3-p429..."
     system "ruby-build 1.9.3-p429 ~/.rubies/"
+    system "gem install rubygems_update"
+    system "gem update --system"
   end
   
   # Wrap up the whole install
