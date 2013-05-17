@@ -1,5 +1,4 @@
 require 'formula'
-require 'pp'
 
 class BuildDevbox < Formula
   homepage 'https://github.com/dhallman/ruby-envs/wiki/setup-devbox'
@@ -9,36 +8,26 @@ class BuildDevbox < Formula
 
   head 'https://github.com/dhallman/homebrew-ruby_envs.git', :branch => 'master'
 
-  require_tap 'phinze/cask'
+  #require_tap 'phinze/cask'
   depends_on 'chruby'
   depends_on 'ruby-build'
-  depends_on 'brew-cask'
+  depends_on 'bash-completion'
+  #depends_on 'wget'
+  #depends_on 'curl'
+  #depends_on 'ack'
+  #depends_on 'vim'
+  #depends_on 'mysql'
+  #depends_on 'brew-cask'
 
-  def suppress_caveats?(depi)
-    true
+  def finalize_build_build(fi)
+    ohai "Installing ruby 1.9.3-p429..."
+    system "ruby-build 1.9.3-p429 ~/.rubies/"
   end
-
-  def install
-    #depends_on 'mysql'
-    ohai "Mysql is installed."
-    #depends_on 'brew-cask'
-    #ohai "Brew cask is installed."
-  end
-
-  def finalize_chruby(depi)
-    ohai "Finalize chruby ! "
-    pp depi
-  end
-#
-  #def finalize_ruby_build(depi)
-    #ohai "Finalize ruby-build ! #{depi.inspect}..."
-    #pp depi
-  #end
   
-  def finalize_brew_cask(depi)
-    ohai "Finalize brew-cask ! "
-    pp depi
+  # Wrap up the whole install
+  def install
+    ohai "Done"
   end
-#
+
 end
 
