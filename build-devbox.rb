@@ -20,7 +20,7 @@ class BuildDevbox < Formula
   depends_on 'apple-gcc42'
   depends_on 'libyaml'
   depends_on 'readline'
-  depends_on 'libxml2', 'with-xml2-config'
+  depends_on 'libxml2' => 'with-xml2-config'
   depends_on 'libxslt'
   depends_on 'libksba'
   depends_on 'openssl'
