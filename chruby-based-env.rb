@@ -1,6 +1,6 @@
 require 'formula'
 
-class BuildDevbox < Formula
+class ChrubyBasedEnv < Formula
   homepage 'https://github.com/dhallman/ruby-envs/wiki/setup-devbox'
 
   url 'https://github.com/dhallman/homebrew-ruby_envs.git', :tag => '0.0.3'
@@ -9,19 +9,6 @@ class BuildDevbox < Formula
   head 'https://github.com/dhallman/homebrew-ruby_envs.git', :branch => 'master'
 
   keg_only "This is a tool chain formula, with no tools itself."
-
-  # PRE-INIT STEPS
-  
-  # install apple command line tools
-  # https://daw.apple.com/cgi-bin/WebObjects/DSAuthWeb.woa/wa/login?appIdKey=d4f7d769c2abecc664d0dadfed6a67f943442b5e9c87524d4587a95773750cea&path=%2F%2Fdownloads%2Findex.action
-
-  # brew doctor
-  # sudo mkdir /usr/local/Cellar
-  # sudo chown -R `whoami` /usr/local
-  #
-  # brew tap homebrew/dupes
-  # brew tap --repair
-  # brew install git
 
   #require_tap 'phinze/cask'
   #
