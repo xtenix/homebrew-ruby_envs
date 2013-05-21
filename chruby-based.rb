@@ -10,19 +10,32 @@ class BuildDevbox < Formula
 
   keg_only "This is a tool chain formula, with no tools itself."
 
+  # PRE-INIT STEPS
+  
+  # install apple command line tools
+  # https://daw.apple.com/cgi-bin/WebObjects/DSAuthWeb.woa/wa/login?appIdKey=d4f7d769c2abecc664d0dadfed6a67f943442b5e9c87524d4587a95773750cea&path=%2F%2Fdownloads%2Findex.action
+
+  # brew doctor
+  # sudo mkdir /usr/local/Cellar
+  # sudo chown -R `whoami` /usr/local
+  #
+  # brew tap homebrew/dupes
+  # brew tap --repair
+  # brew install git
+
   #require_tap 'phinze/cask'
-  repair_taps
-  require_tap 'homebrew/dupes'
+  #
+  depends_on 'git'
   depends_on 'autoconf'
   depends_on 'automake'
   depends_on 'libtool'
   depends_on 'pkg-config'
-  depends_on 'apple-gcc42'
+  #depends_on 'apple-gcc42'
   depends_on 'libyaml'
   depends_on 'readline'
   depends_on 'libxml2' => 'with-xml2-config'
   depends_on 'libxslt'
-  depends_on 'libksba'
+  # depends_on 'libksba' - with apple, don't need
   depends_on 'openssl'
   depends_on 'sqlite'
   depends_on 'chruby'
@@ -35,16 +48,12 @@ class BuildDevbox < Formula
   depends_on 'mysql'
   #depends_on 'brew-cask'
 
-  def finalize_ruby_build(fi)
-    ohai "Installing ruby 1.9.3-p429..."
-    #system "ruby-build 1.9.3-p429 ~/.rubies/1.9.3-p429"
-    #system "gem install bundler"
-  end
-  
-  # Wrap up the whole install
   def install
+    ohai "Installing ruby 1.9.3-p429..."
+    system "ruby-build 1.9.3-p429 ~/.rubies/1.9.3-p429"
+    system "gem install bundler"
     ohai "Done"
   end
-
+  
 end
 
