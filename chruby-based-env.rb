@@ -22,7 +22,7 @@ class ChrubyBasedEnv < Formula
   depends_on 'readline'
   depends_on 'libxml2' => 'with-xml2-config'
   depends_on 'libxslt'
-  # depends_on 'libksba' - with apple, don't need
+  depends_on 'libksba'
   depends_on 'openssl'
   depends_on 'sqlite'
   depends_on 'chruby'
